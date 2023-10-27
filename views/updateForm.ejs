@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Book Creation Form </h2>
+
+    <form method="POST">
+
+        <% for(let i of book){ %>
+
+        Book Title: <input type="text" value="<%= i.bookTitle %>" name="title"/><br/><br/>
+        Book Description: <textarea type="text" name="description"><%= i.bookdescription %></textarea><br/><br/>
+
+        <% } %>
+
+
+        <input type="submit" name="" value="Update">
+    </form>
+</body>
+</html>
